@@ -29,8 +29,8 @@
     "rules":
     {
         "indent": [
-            "warn",
-            "tab"
+            "off",
+            "spaces"
         ],
         "comma-dangle": "off",
         "react/no-unused-state": "error",
@@ -56,10 +56,7 @@
         {
             "pragma": "React",
             "version": "16.8"
-        }
-    },
-    "settings":
-    {
+        },
         "import/resolver":
         {
             "webpack":

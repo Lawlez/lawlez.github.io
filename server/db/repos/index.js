@@ -2,10 +2,10 @@
 
 // Renaming and exporting all repository classes:
 
-const Users = require('./users');
-const Products = require('./products');
+const Users = require('./users')
+const Products = require('./products')
 
 module.exports = {
   Users: Users,
   Products: Products
-};
+}
