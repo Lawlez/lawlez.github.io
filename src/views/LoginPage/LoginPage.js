@@ -21,8 +21,6 @@ import Email from '@material-ui/icons/Email'
 import People from '@material-ui/icons/People'
 // core components
 
-import styles from 'assets/jss/material-kit-react/views/loginPage.js'
-
 import image from 'assets/img/bg7.jpg'
 
 const useStyles = makeStyles(styles)
