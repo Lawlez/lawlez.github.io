@@ -1,4 +1,4 @@
-[![Known Vulnerabilities](https://snyk.io/test/github/tg970/PERN-Advanced-Starter/badge.svg)](https://snyk.io/test/github/tg970/PERN-Advanced-Starter)
+[![Known Vulnerabilities](https://snyk.io/test/github/Lawlez/Lawlez.github.io/badge.svg?targetFile=package.json)](https://snyk.io/test/github/Lawlez/Lawlez.github.io?targetFile=package.json)
 
 #lawlez.github.io
 
