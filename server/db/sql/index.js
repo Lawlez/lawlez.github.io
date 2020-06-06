@@ -1,5 +1,5 @@
-const QueryFile = require('pg-promise').QueryFile;
-const path = require('path');
+const QueryFile = require('pg-promise').QueryFile
+const path = require('path')
 
 // Criteria for deciding whether to place a particular query into an external SQL file or to
 // keep it in-line (hard-coded):
@@ -16,7 +16,7 @@ const path = require('path');
 
 // Helper for linking to external query files;
 function sql(file) {
-  const fullPath = path.join(__dirname, file); // generating full path;
+  const fullPath = path.join(__dirname, file) // generating full path;
 
   const options = {
 
@@ -29,18 +29,18 @@ function sql(file) {
     params: {
       schema: 'public' // replace ${schema~} with "public"
     }
-  };
+  }
 
-  const qf = new QueryFile(fullPath, options);
+  const qf = new QueryFile(fullPath, options)
 
   if (qf.error) {
     // Something is wrong with our query file :(
     // Testing all files through queries can be cumbersome,
     // so we also report it here, while loading the module:
-    console.error(qf.error);
+    console.error(qf.error)
   }
 
-  return qf;
+  return qf
   // See QueryFile API:
   // http://vitaly-t.github.io/pg-promise/QueryFile.html
 }
@@ -60,7 +60,7 @@ module.exports = {
     find: sql('products/find.sql'),
     add: sql('products/add.sql')
   }
-};
+}
 
 // Possible alternative - enumerating all SQL files automatically ;)
 // API: http://vitaly-t.github.io/pg-promise/utils.html#.enumSql
