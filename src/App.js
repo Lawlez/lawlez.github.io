@@ -4,7 +4,7 @@ import { Provider } from 'react-redux'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import HomePage from './views/HomePage/HomePage.js'
 import LoginPage from './views/LoginPage/LoginPage.js'
-import { Paper, Container } from '@material-ui/core'
+import { Container } from '@material-ui/core'
 const Header = () => <div>HEADER</div>
 const Footer = () => <div>FOOTER</div>
 

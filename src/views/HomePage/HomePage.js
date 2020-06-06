@@ -1,21 +1,13 @@
 import React from 'react'
-// nodejs library that concatenates classes
-import classNames from 'classnames'
-// @material-ui/core components
-import { makeStyles } from '@material-ui/core/styles'
 
-// @material-ui/icons
-import Paint from '@material-ui/icons/FormatPaint'
-// core components
-
-import { Paper, Container } from '@material-ui/core'
+import { Paper } from '@material-ui/core'
 // Sections for this page
 import IntroSection from './Sections/IntroSection.js'
 import WorkSection from './Sections/WorkSection.js'
 import Examples from './Sections/Examples.js'
 import Readme from './Sections/Readme.js'
 
-export default function HomePage(props) {
+export default function HomePage() {
     return (
         <div>
             <div>

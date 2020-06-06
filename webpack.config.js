@@ -11,7 +11,8 @@ module.exports = {
         filename: 'bundle.js'
     },
     module: {
-        rules: [{
+        rules: [
+            {
                 test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
                 use: {
@@ -32,8 +33,8 @@ module.exports = {
             },
             {
                 test: /\.(txt|md)$/,
-                use: 'raw-loader',
-            },
+                use: 'raw-loader'
+            }
         ]
     },
     resolve: {
@@ -41,9 +42,6 @@ module.exports = {
         extensions: ['.js', '.jsx', '.json']
     },
     devServer: {
-        port: 3001,
-        // open: true,
-        stats: 'minimal',
         historyApiFallback: true,
         proxy: {
             '/api': 'http://localhost:3000'

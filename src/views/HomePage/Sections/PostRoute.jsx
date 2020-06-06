@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react'
 import { connect } from 'react-redux'
-import { addUser } from 'store/actions/index'
+import { addUser } from '../../../store/actions/index'
 import axios from 'axios'
 // @material-ui/core componentsss
 import FormControlLabel from '@material-ui/core/FormControlLabel'
@@ -23,13 +23,13 @@ function PostRoute(props) {
     function onSubmit() {
         setLoading(true)
         axios
-            .post('/api/users/add', data)
-            .then(response => {
+            .post('http://localhost:3000/api/users/add', data)
+            .then((response) => {
                 props.addUser(response.data)
                 setData(defultForm)
                 setLoading(false)
             })
-            .catch(error => {
+            .catch((error) => {
                 console.log(error)
             })
     }
@@ -37,11 +37,11 @@ function PostRoute(props) {
     function onChange(event) {
         event.persist()
         let { id, value } = event.target
-        setData(data => ({ ...data, [id]: value }))
+        setData((data) => ({ ...data, [id]: value }))
     }
 
     function onChangeSwitch(field) {
-        setData(data => ({ ...data, [field]: !data[field] }))
+        setData((data) => ({ ...data, [field]: !data[field] }))
     }
 
     return (
@@ -53,7 +53,7 @@ function PostRoute(props) {
             <input
                 label="User Name"
                 id="name"
-                onChange={e => {
+                onChange={(e) => {
                     onChange(e)
                 }}
             />
@@ -70,7 +70,7 @@ function PostRoute(props) {
             <input
                 label="Message"
                 id="message"
-                onChange={e => {
+                onChange={(e) => {
                     onChange(e)
                 }}
             />
@@ -81,9 +81,9 @@ function PostRoute(props) {
     )
 }
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = (dispatch) => {
     return {
-        addUser: user => dispatch(addUser(user))
+        addUser: (user) => dispatch(addUser(user))
     }
 }
 
