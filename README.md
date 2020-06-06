@@ -1,9 +1,11 @@
 [![Known Vulnerabilities](https://snyk.io/test/github/tg970/PERN-Advanced-Starter/badge.svg)](https://snyk.io/test/github/tg970/PERN-Advanced-Starter)
 
-# PERN-Advanced-Starter
+#lawlez.github.io
+
+## using the PERN stack
 The PERN stack: [PostgresSQL](https://www.postgresql.org/), [Express](https://expressjs.com/), [React](https://reactjs.org/), &amp; [Node](https://nodejs.org/en/)
 
-###### Live example: [PERN-Starter](https://pern-starter.herokuapp.com/)
+###### Live example: [Example](https://pern-starter.herokuapp.com/)
 
 What makes this an advanced starter app you ask? This project folds together several tools that come together for a powerful dev environment and good start for a fully functional production application. It employs an 'advanced' implementation of [pg-promise](http://vitaly-t.github.io/pg-promise/) for interaction with a SQL database with additional basic security concerns added to the [Express](https://expressjs.com/) server.
 

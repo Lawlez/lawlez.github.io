@@ -1,10 +1,10 @@
 {
-  "name": "pern-advanced-starter",
-  "version": "1.0.0",
-  "description": "Advanced PERN stack starter app",
+  "name": "lawlez.github.io",
+  "version": "0.9.1",
+  "description": "Personal Website",
   "engines": {
-    "npm": "6.13.1",
-    "node": "13.3.0"
+    "yarn": "1.22.4",
+    "node": "14.4.0"
   },
   "main": "server/index.js",
   "scripts": {
@@ -12,21 +12,22 @@
     "build": "webpack --mode production",
     "client": "webpack-dev-server --mode development --devtool inline-source-map --hot",
     "server": "nodemon src/server/index.js",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"yarn run server\" \"yarn run client\"",
+    "eslint": "eslint --fix './src/**/*.js'"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tg970/PERN-Advanced-Starter.git"
+    "url": "git+https://github.com/lawlez/lawlez.github.io.git"
   },
-  "author": "Tyler Goodman",
-  "license": "ISC",
+  "author": "Dominik Feger",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/tg970/PERN-Advanced-Starter/issues"
+    "url": "https://github.com/lawlez/lawlez.github.io/issues"
   },
-  "homepage": "https://github.com/tg970/PERN-Advanced-Starter#readme",
+  "homepage": "https://github.com/lawlez/lawlez.github.io#readme",
   "dependencies": {
-    "@material-ui/core": "^4.x.x",
-    "@material-ui/icons": "^4.x.x",
+    "@material-ui/core": "^4.9.x",
+    "@material-ui/icons": "^4.9.x",
     "axios": "^0.19.x",
     "bluebird": "^3.5.3",
     "classnames": "^2.2.6",
@@ -52,24 +53,29 @@
     "redux": "^4.0.1"
   },
   "devDependencies": {
-    "babel-core": "^6.26.3",
-    "babel-loader": "^7.x.x",
-    "babel-plugin-transform-class-properties": "^6.24.1",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "@babel/cli": "^7.6.2",
+    "@babel/core": "^7.6.2",
+    "@babel/node": "^7.6.2",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-proposal-export-default-from": "^7.5.2",
+    "@babel/plugin-syntax-export-default-from": "^7.2.0",
+    "@babel/plugin-transform-regenerator": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-core": "^6.26.x",
+    "babel-loader": "^8.0.6",
     "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1",
     "clean-webpack-plugin": "^3.x.x",
     "concurrently": "^5.x.x",
     "css-loader": "^3.4.2",
     "eslint": "^6.x.x",
-    "eslint-config-airbnb": "^18.x.x",
+    "eslint-config-react": "^1.1.7",
     "eslint-import-resolver-webpack": "^0.12.x",
     "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-react": "^7.12.4",
     "eslint-plugin-react-hooks": "^3.0.0",
     "eslint-plugin-security": "^1.4.0",
+    "eslint-plugin-prettier":"*",
     "file-loader": "^6.x.x",
     "html-webpack-plugin": "^4.x.x",
     "node-sass": "^4.13.1",
@@ -77,6 +83,7 @@
     "raw-loader": "^4.0.0",
     "react-markdown": "^4.3.1",
     "sass-loader": "^8.0.2",
+    "snyk": "^1.336.0",
     "style-loader": "^1.x.x",
     "url-loader": "^4.x.x",
     "webpack": "^4.29.3",
