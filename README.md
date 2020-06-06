@@ -1,6 +1,8 @@
 [![Known Vulnerabilities](https://snyk.io/test/github/Lawlez/Lawlez.github.io/badge.svg?targetFile=package.json)](https://snyk.io/test/github/Lawlez/Lawlez.github.io?targetFile=package.json)
 
-#lawlez.github.io
+![run test CI](https://github.com/Lawlez/Lawlez.github.io/workflows/run%20test%20CI/badge.svg?branch=master)
+
+# lawlez.github.io
 
 ## using the PERN stack
 The PERN stack: [PostgresSQL](https://www.postgresql.org/), [Express](https://expressjs.com/), [React](https://reactjs.org/), &amp; [Node](https://nodejs.org/en/)
