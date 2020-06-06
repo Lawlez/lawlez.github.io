@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react'
 import { connect } from 'react-redux'
-import { addUser } from 'store/actions/index'
+import { addUser } from '../../../store/actions/index'
 import axios from 'axios'
 // @material-ui/core components
 import { makeStyles } from '@material-ui/core/styles'
@@ -17,12 +17,12 @@ function WorkSection(props) {
         if (!props.users.length && !showLoading) {
             setLoading(true)
             axios
-                .get('/api/users/all')
-                .then(response => {
+                .get('http://localhost:3000/api/users/all')
+                .then((response) => {
                     setLoading(false)
                     addUser(response.data)
                 })
-                .catch(error => {
+                .catch((error) => {
                     console.log(error)
                 })
         }
@@ -54,13 +54,13 @@ function WorkSection(props) {
     )
 }
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = (dispatch) => {
     return {
-        addUser: user => dispatch(addUser(user))
+        addUser: (user) => dispatch(addUser(user))
     }
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
     return { users: state.users }
 }
 
