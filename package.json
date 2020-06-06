@@ -53,7 +53,7 @@
         "@material-ui/core": "latest",
         "@material-ui/icons": "^4.9.x",
         "axios": "^0.19.x",
-        "bluebird": "^3.5.3",
+        "bluebird": "^3.7.2",
         "classnames": "^2.2.6",
         "cors": "^2.8.5",
         "dotenv": "^8.2.0",
