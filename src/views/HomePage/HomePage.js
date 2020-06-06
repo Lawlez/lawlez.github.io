@@ -1,4 +1,3 @@
-/* eslint-disable */
 import React from 'react'
 // nodejs library that concatenates classes
 import classNames from 'classnames'
@@ -9,8 +8,7 @@ import { makeStyles } from '@material-ui/core/styles'
 import Paint from '@material-ui/icons/FormatPaint'
 // core components
 
-import styles from 'assets/jss/material-kit-react/views/landingPage.js'
-
+import { Paper, Container } from '@material-ui/core'
 // Sections for this page
 import IntroSection from './Sections/IntroSection.js'
 import WorkSection from './Sections/WorkSection.js'
@@ -22,10 +20,18 @@ export default function HomePage(props) {
         <div>
             <div>
                 <div>
-                    <IntroSection />
-                    <WorkSection />
-                    <Examples />
-                    <Readme />
+                    <Paper elevation={3}>
+                        <IntroSection />
+                    </Paper>
+                    <Paper elevation={3}>
+                        <WorkSection />
+                    </Paper>
+                    <Paper elevation={3}>
+                        <Examples />
+                    </Paper>
+                    <Paper elevation={3}>
+                        <Readme />
+                    </Paper>
                 </div>
             </div>
         </div>
