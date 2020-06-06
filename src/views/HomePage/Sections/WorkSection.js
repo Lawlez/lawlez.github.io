@@ -15,7 +15,7 @@ import styles from 'assets/jss/material-kit-react/views/landingPageSections/work
 
 const useStyles = makeStyles(styles)
 
-export default function WorkSection() {
+export const WorkSection =()=> {
 	const classes = useStyles()
 	return (
 		<div className={classes.section}>
@@ -36,3 +36,5 @@ export default function WorkSection() {
 		</div>
 	)
 }
+
+export default WorkSection

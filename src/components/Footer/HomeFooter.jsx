@@ -1,4 +1,4 @@
-/*eslint-disable*/
+
 import React from "react";
 // nodejs library to set properties for components
 import PropTypes from "prop-types";
@@ -28,15 +28,15 @@ function Footer({ ...props }) {
           <List className={classes.list}>
             <ListItem className={classes.inlineBlock}>
               <a
-                href="https://www.tylergoodman.com/"
+                href="https://4Stellungskraft.ch/"
                 className={classes.block}
               >
-                T. Goodman
+                4Stellungskraft
               </a>
             </ListItem>
             <ListItem className={classes.inlineBlock}>
               <a
-                href="https://github.com/tg970"
+                href="https://github.com/lawlez"
                 className={classes.block}
               >
                 <i className="fab fa-github-square"></i>
@@ -44,7 +44,7 @@ function Footer({ ...props }) {
             </ListItem>
             <ListItem className={classes.inlineBlock}>
               <a
-                href="https://www.linkedin.com/in/thetylergoodman/"
+                href="https://www.linkedin.com/in/dominik-feger/"
                 className={classes.block}
               >
                 <i className="fab fa-linkedin"></i>
@@ -54,7 +54,7 @@ function Footer({ ...props }) {
         </div>
         <div id="thanks" className={classes.right}>
           Thanks for stopping by
-          <ThumbUp id="thumbup" style={{ paddingLeft: '5px' }}/>
+          <ThumbUp id="thumbup" style={{ paddingLeft: '4px' }}/>
         </div>
       </div>
     </footer>
