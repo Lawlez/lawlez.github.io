@@ -221,10 +221,8 @@ export default function SectionBasics() {
 							</div>
 							<div
 								className={
-									classes.checkboxAndRadio +
-                  ' ' +
-                  classes.checkboxAndRadioHorizontal
-								}
+									`${classes.checkboxAndRadio} ${classes.checkboxAndRadioHorizontal}
+								`}
 							>
 								<FormControlLabel
 									control={
@@ -245,10 +243,8 @@ export default function SectionBasics() {
 							</div>
 							<div
 								className={
-									classes.checkboxAndRadio +
-                  ' ' +
-                  classes.checkboxAndRadioHorizontal
-								}
+									`${classes.checkboxAndRadio} ${classes.checkboxAndRadioHorizontal}
+								`}
 							>
 								<FormControlLabel
 									control={
@@ -270,10 +266,8 @@ export default function SectionBasics() {
 							</div>
 							<div
 								className={
-									classes.checkboxAndRadio +
-                  ' ' +
-                  classes.checkboxAndRadioHorizontal
-								}
+									`${classes.checkboxAndRadio} ${classes.checkboxAndRadioHorizontal}
+								`}
 							>
 								<FormControlLabel
 									disabled
@@ -298,10 +292,8 @@ export default function SectionBasics() {
 							</div>
 							<div
 								className={
-									classes.checkboxAndRadio +
-                  ' ' +
-                  classes.checkboxAndRadioHorizontal
-								}
+									`${classes.checkboxAndRadio} ${classes.checkboxAndRadioHorizontal}
+								`}
 							>
 								<FormControlLabel
 									disabled
@@ -332,10 +324,8 @@ export default function SectionBasics() {
 							</div>
 							<div
 								className={
-									classes.checkboxAndRadio +
-                  ' ' +
-                  classes.checkboxAndRadioHorizontal
-								}
+									`${classes.checkboxAndRadio} ${classes.checkboxAndRadioHorizontal}
+								`}
 							>
 								<FormControlLabel
 									control={
@@ -366,10 +356,8 @@ export default function SectionBasics() {
 							</div>
 							<div
 								className={
-									classes.checkboxAndRadio +
-                  ' ' +
-                  classes.checkboxAndRadioHorizontal
-								}
+									`${classes.checkboxAndRadio} ${classes.checkboxAndRadioHorizontal}
+								`}
 							>
 								<FormControlLabel
 									control={
@@ -400,10 +388,8 @@ export default function SectionBasics() {
 							</div>
 							<div
 								className={
-									classes.checkboxAndRadio +
-                  ' ' +
-                  classes.checkboxAndRadioHorizontal
-								}
+									`${classes.checkboxAndRadio} ${classes.checkboxAndRadioHorizontal}
+								`}
 							>
 								<FormControlLabel
 									disabled
@@ -435,10 +421,8 @@ export default function SectionBasics() {
 							</div>
 							<div
 								className={
-									classes.checkboxAndRadio +
-                  ' ' +
-                  classes.checkboxAndRadioHorizontal
-								}
+									`${classes.checkboxAndRadio} ${classes.checkboxAndRadioHorizontal}
+								`}
 							>
 								<FormControlLabel
 									disabled

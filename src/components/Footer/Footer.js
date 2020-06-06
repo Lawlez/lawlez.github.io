@@ -33,29 +33,20 @@ export default function Footer(props) {
           <List className={classes.list}>
             <ListItem className={classes.inlineBlock}>
               <a
-                href="https://www.creative-tim.com/?ref=mkr-footer"
+                href="https://lawlez.ch/?ref=lawlez.github.io"
                 className={classes.block}
                 target="_blank"
               >
-                Creative Tim
+                Lawlez Web & 3D Design
               </a>
             </ListItem>
             <ListItem className={classes.inlineBlock}>
               <a
-                href="https://www.creative-tim.com/presentation?ref=mkr-footer"
+                href="https://instagram.com/lawlez"
                 className={classes.block}
                 target="_blank"
               >
-                About Creative Tim
-              </a>
-            </ListItem>
-            <ListItem className={classes.inlineBlock}>
-              <a
-                href="http://blog.creative-tim.com/?ref=mkr-footer"
-                className={classes.block}
-                target="_blank"
-              >
-                Creative Tim Blog
+                Instagram
               </a>
             </ListItem>
           </List>
@@ -64,13 +55,13 @@ export default function Footer(props) {
           Made with &nbsp;
           <Favorite className={classes.icon} />&nbsp; by &nbsp;
           <a
-            href="https://www.creative-tim.com?ref=mkr-footer"
+            href="https://skills.rendered.ch?ref=lawlez.github.io"
             className={aClasses}
             target="_blank"
           >
-            Creative Tim
+            Dominik Feger
           </a>
-          &nbsp; for a better web. &nbsp;
+          &nbsp; Experience Design. &nbsp;
         </div>
       </div>
     </footer>

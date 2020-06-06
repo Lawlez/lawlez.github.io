@@ -7,8 +7,6 @@ The PERN stack: [PostgresSQL](https://www.postgresql.org/), [Express](https://ex
 
 ###### Live example: [Example](https://pern-starter.herokuapp.com/)
 
-What makes this an advanced starter app you ask? This project folds together several tools that come together for a powerful dev environment and good start for a fully functional production application. It employs an 'advanced' implementation of [pg-promise](http://vitaly-t.github.io/pg-promise/) for interaction with a SQL database with additional basic security concerns added to the [Express](https://expressjs.com/) server.
-
 Here's a list of the other fun bits folded into this project:
 - [ESLint](https://eslint.org/): Style guide, syntax, and developer error finder and enforcer
 - [Webpack 4](https://webpack.js.org/): Static module bundler, complier, & hot-reloader
@@ -24,7 +22,7 @@ First, make sure you have have PostgreSQL installed and running. Visit [the Post
 
 Open a terminal window and create a new PG database:
 
-	$ createdb PERN-Starter
+	$ createdb lawlez_io
 
 Then to get going using this starter app, first fork the repo:
 
@@ -38,8 +36,8 @@ Then clone the fork to your local machine:
 
 Hop into the project directory and install the dependencies:
 
-	$ cd PERN-Advanced-Starter
-	$ npm i
+	$ cd lawlez.github.io
+	$ yarn install
 
 
 > ![audit report](https://raw.githubusercontent.com/tg970/PERN-Advanced-Starter/master/src/assets/img/Audit_2019-04-12.png)
@@ -50,12 +48,12 @@ This is a constant battle: check your dependencies regularly and update them. Mo
 
 To start the Webpack dev server run:
 
-	$ npm run dev
+	$ yarn dev
 
 And to build for deployment/production run:
 
-	$ npm run build
-	$ npm start
+	$ yarn build
+	$ yarn start
 
 Also don't forget that your API won't work unless you create a users table.
 

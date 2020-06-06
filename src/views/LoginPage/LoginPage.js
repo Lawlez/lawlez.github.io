@@ -23,13 +23,13 @@ import image from 'assets/img/bg7.jpg'
 
 const useStyles = makeStyles(styles)
 
-export default function LoginPage(props) {
+export const LoginPage = (props) =>  {
+
 	const [cardAnimaton, setCardAnimation] = React.useState('cardHidden')
-	setTimeout(function() {
+	setTimeout(() => {
 		setCardAnimation('')
 	}, 700)
 	const classes = useStyles()
-	const { ...rest } = props
 	return (
 		<div>
 			<div
@@ -50,7 +50,7 @@ export default function LoginPage(props) {
 										<div className={classes.socialLine}>
 											<Button
 												justIcon
-												href="#pablo"
+												href="#placeholder"
 												target="_blank"
 												color="transparent"
 												onClick={e => e.preventDefault()}
@@ -59,7 +59,7 @@ export default function LoginPage(props) {
 											</Button>
 											<Button
 												justIcon
-												href="#pablo"
+												href="#placeholder"
 												target="_blank"
 												color="transparent"
 												onClick={e => e.preventDefault()}
@@ -68,7 +68,7 @@ export default function LoginPage(props) {
 											</Button>
 											<Button
 												justIcon
-												href="#pablo"
+												href="#placeholder"
 												target="_blank"
 												color="transparent"
 												onClick={e => e.preventDefault()}
@@ -144,3 +144,5 @@ export default function LoginPage(props) {
 		</div>
 	)
 }
+
+export default LoginPage

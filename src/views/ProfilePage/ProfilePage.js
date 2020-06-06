@@ -36,7 +36,7 @@ const useStyles = makeStyles(styles)
 
 export default function ProfilePage(props) {
 	const classes = useStyles()
-	const { ...rest } = props
+	const { ...restProps } = props
 	const imageClasses = classNames(
 		classes.imgRaised,
 		classes.imgRoundedCircle,
@@ -56,8 +56,8 @@ export default function ProfilePage(props) {
 										<img src={profile} alt="..." className={imageClasses} />
 									</div>
 									<div className={classes.name}>
-										<h3 className={classes.title}>Christian Louboutin</h3>
-										<h6>DESIGNER</h6>
+										<h3 className={classes.title}>Dominik Feger</h3>
+										<h6>WEB DESIGNER</h6>
 										<Button justIcon link className={classes.margin5}>
 											<i className={'fab fa-twitter'} />
 										</Button>

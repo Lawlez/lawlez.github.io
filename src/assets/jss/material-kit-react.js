@@ -96,13 +96,13 @@ const defaultFont = {
 	lineHeight: '1.5em'
 }
 
-const primaryColor = '#29558a'
+const primaryColor = 'rgba(238,120,148,1)'
 const warningColor = '#ff9800'
 const dangerColor = '#f44336'
 const successColor = '#4caf50'
 const infoColor = '#00acc1'
 const roseColor = '#e91e63'
-const grayColor = '#878787'
+const grayColor = '#e7e7e7'
 const blackColor = '#000'
 
 const primaryBoxShadow = {
@@ -190,7 +190,7 @@ const defaultBoxShadow = {
 }
 
 const title = {
-	color: '#3C4858',
+	color: 'rgba(201,192,190,1)',
 	margin: '1.75rem 0 0.875rem',
 	textDecoration: 'none',
 	fontWeight: '700',
