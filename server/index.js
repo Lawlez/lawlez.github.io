@@ -1,4 +1,3 @@
-
 const express = require('express')
 const RateLimit = require('express-rate-limit')
 const helmet = require('helmet')
@@ -14,13 +13,14 @@ const db = require('./db')
 
 // config
 const PORT = process.env.PORT || 3000
+console.log(PORT)
 app.enable('trust proxy')
 
 // rate limit config
 var apiLimiter = new RateLimit({
-  windowMs: 15*60*1000, // 15 minutes
-  max: 100, // limit each IP to 100 requests
-  delayMs: 0 // disabled until limit is met
+    windowMs: 15 * 60 * 1000, // 15 minutes
+    max: 100, // limit each IP to 100 requests
+    delayMs: 0 // disabled until limit is met
 })
 
 // middleware
@@ -43,7 +43,7 @@ app.use('/api/products', products)
 
 // test for client comm to server
 app.get('/api/hello', (req, res) => {
-  res.send({ message: 'Hello there!' })
+    res.send({ message: 'Hello there!' })
 })
 
 // port listener and happy-happy report

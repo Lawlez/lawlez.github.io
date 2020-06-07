@@ -2,6 +2,7 @@ import webpack from 'webpack'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import path from 'path'
 import HardSourceWebpackPlugin from 'hard-source-webpack-plugin'
+var DashboardPlugin = require('webpack-dashboard/plugin')
 
 export default {
     resolve: {
@@ -28,6 +29,7 @@ export default {
     },
     plugins: [
         new HardSourceWebpackPlugin(),
+        new DashboardPlugin({ port: 3003 }),
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NoEmitOnErrorsPlugin(),
         new HtmlWebpackPlugin({
@@ -44,6 +46,7 @@ export default {
         port: 3001,
         // open: true,
         stats: 'minimal',
+        contentBase: './src',
         historyApiFallback: true,
         proxy: {
             '/api': 'http://localhost:3000'
