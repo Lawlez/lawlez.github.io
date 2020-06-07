@@ -7,8 +7,6 @@
 ## using the PERN stack
 The PERN stack: [PostgresSQL](https://www.postgresql.org/), [Express](https://expressjs.com/), [React](https://reactjs.org/), &amp; [Node](https://nodejs.org/en/)
 
-###### Live example: [Example](https://pern-starter.herokuapp.com/)
-
 Here's a list of the other fun bits folded into this project:
 - [ESLint](https://eslint.org/): Style guide, syntax, and developer error finder and enforcer
 - [Webpack 4](https://webpack.js.org/): Static module bundler, complier, & hot-reloader
@@ -26,15 +24,7 @@ Open a terminal window and create a new PG database:
 
 	$ createdb lawlez_io
 
-Then to get going using this starter app, first fork the repo:
-
-![fork](https://raw.githubusercontent.com/tg970/PERN-Advanced-Starter/master/src/assets/img/fork.png)
-
-Then clone the fork to your local machine:
-
-  `$ git clone https://github.com/*YOUR-USERNAME-HERE*/PERN-Advanced-Starter.git`
-
-> **Why fork?** That way you can make your own changes, save them to github, and even share them with the main fork.
+Then to get going using this starter app
 
 Hop into the project directory and install the dependencies:
 
@@ -42,7 +32,6 @@ Hop into the project directory and install the dependencies:
 	$ yarn install
 
 
-> ![audit report](https://raw.githubusercontent.com/tg970/PERN-Advanced-Starter/master/src/assets/img/Audit_2019-04-12.png)
 > If you have npm v6+ installed and notice there were more than 0 vulnerabilities are found, run: `npm audit fix`
 
 This is a constant battle: check your dependencies regularly and update them. More about npm's audit functionality [here](https://docs.npmjs.com/getting-started/running-a-security-audit).
@@ -75,8 +64,6 @@ http://localhost:3000/api/users/init
 
 >  Successful return:
 >![id's](https://raw.githubusercontent.com/tg970/PERN-Advanced-Starter/master/src/assets/img/ids.png)
-
-And if you don't have it: [json formatter for chrome.](https://github.com/callumlocke/json-formatter)
 
 ## What's happening under the hood
 
