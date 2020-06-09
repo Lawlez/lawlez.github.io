@@ -140,7 +140,7 @@
         "replace": "1.2.0",
         "rimraf": "3.0.0",
         "sass-loader": "8.0.0",
-        "snyk": "^1.336.0",
+        "snyk": "^1.337.0",
         "style-loader": "1.2.1",
         "url-loader": "4.1.0",
         "webpack": "4.43.0",
