@@ -6,7 +6,4 @@ import App from './App'
 // Easy access to the redux store for dev
 // window.store = store;
 
-render(
-	<App store={store} />,
-	document.getElementById('root')
-)
+render(<App store={store} />, document.getElementById('root'))

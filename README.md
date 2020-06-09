@@ -3,18 +3,20 @@
 #lawlez.github.io
 
 ## using the PERN stack
+
 The PERN stack: [PostgresSQL](https://www.postgresql.org/), [Express](https://expressjs.com/), [React](https://reactjs.org/), &amp; [Node](https://nodejs.org/en/)
 
 ###### Live example: [Example](https://pern-starter.herokuapp.com/)
 
 Here's a list of the other fun bits folded into this project:
-- [ESLint](https://eslint.org/): Style guide, syntax, and developer error finder and enforcer
-- [Webpack 4](https://webpack.js.org/): Static module bundler, complier, & hot-reloader
-- [Redux](https://redux.js.org/): Predictable state container/manager for JavaScript apps
-- [React-Router](https://github.com/ReactTraining/react-router#readme): “Dynamic Routing” (navigation) for React client
-- [React Material UI](https://material-ui.com/): Component library implementing Google's [Material Design](https://material.io/)
-- [Material-UI Kit](https://www.creative-tim.com/product/material-kit-react): Curated mid-level component library complete with view examples
-- [Axios](https://github.com/axios/axios): Promise based HTTP client for the browser and node.js
+
+-   [ESLint](https://eslint.org/): Style guide, syntax, and developer error finder and enforcer
+-   [Webpack 4](https://webpack.js.org/): Static module bundler, complier, & hot-reloader
+-   [Redux](https://redux.js.org/): Predictable state container/manager for JavaScript apps
+-   [React-Router](https://github.com/ReactTraining/react-router#readme): “Dynamic Routing” (navigation) for React client
+-   [React Material UI](https://material-ui.com/): Component library implementing Google's [Material Design](https://material.io/)
+-   [Material-UI Kit](https://www.creative-tim.com/product/material-kit-react): Curated mid-level component library complete with view examples
+-   [Axios](https://github.com/axios/axios): Promise based HTTP client for the browser and node.js
 
 ## Using this project
 
@@ -22,7 +24,7 @@ First, make sure you have have PostgreSQL installed and running. Visit [the Post
 
 Open a terminal window and create a new PG database:
 
-	$ createdb lawlez_io
+    $ createdb lawlez_io
 
 Then to get going using this starter app, first fork the repo:
 
@@ -36,24 +38,22 @@ Then clone the fork to your local machine:
 
 Hop into the project directory and install the dependencies:
 
-	$ cd lawlez.github.io
-	$ yarn install
-
+    $ cd lawlez.github.io
+    $ yarn install
 
 > ![audit report](https://raw.githubusercontent.com/tg970/PERN-Advanced-Starter/master/src/assets/img/Audit_2019-04-12.png)
 > If you have npm v6+ installed and notice there were more than 0 vulnerabilities are found, run: `npm audit fix`
 
 This is a constant battle: check your dependencies regularly and update them. More about npm's audit functionality [here](https://docs.npmjs.com/getting-started/running-a-security-audit).
 
-
 To start the Webpack dev server run:
 
-	$ yarn dev
+    $ yarn dev
 
 And to build for deployment/production run:
 
-	$ yarn build
-	$ yarn start
+    $ yarn build
+    $ yarn start
 
 Also don't forget that your API won't work unless you create a users table.
 
@@ -62,7 +62,7 @@ Also don't forget that your API won't work unless you create a users table.
 
 To do this hit the following route, either in your browser or with [Postman](https://www.getpostman.com/).
 
-http://localhost:3000/api/users/create  
+http://localhost:3000/api/users/create
 
 > Successful return:
 > ![null](https://raw.githubusercontent.com/tg970/PERN-Advanced-Starter/master/src/assets/img/null.png)
@@ -71,8 +71,8 @@ If you want to seed use:
 
 http://localhost:3000/api/users/init
 
->  Successful return:
->![id's](https://raw.githubusercontent.com/tg970/PERN-Advanced-Starter/master/src/assets/img/ids.png)
+> Successful return:
+> ![id's](https://raw.githubusercontent.com/tg970/PERN-Advanced-Starter/master/src/assets/img/ids.png)
 
 And if you don't have it: [json formatter for chrome.](https://github.com/callumlocke/json-formatter)
 
@@ -81,16 +81,14 @@ And if you don't have it: [json formatter for chrome.](https://github.com/callum
 #### pg-promise: [Read up on it.](https://github.com/vitaly-t/pg-promise)
 
 #### Other Config files:
+
 _.babelrc_ - [Babel](https://babeljs.io/) is a toolchain used by Webpack to convert ECMAScript 2015+ code into a backwards compatible version of JavaScript for old browsers or environments. This file tells Babel our presets and plugins.
 
-_.eslintrc.json_ - This config file tells [ESLint](https://eslint.org/) our settings for interpreting and reporting errors and warnings while we're writing our code. Delete or add rules, change style guide, whatever you want, this is where you do it. For this to work you'll need to make sure you have a linter and eslint installed in your code editor.  
+_.eslintrc.json_ - This config file tells [ESLint](https://eslint.org/) our settings for interpreting and reporting errors and warnings while we're writing our code. Delete or add rules, change style guide, whatever you want, this is where you do it. For this to work you'll need to make sure you have a linter and eslint installed in your code editor.
 
 _nodemon.json_ - When Webpack spins up a dev server it also starts [nodemon](https://nodemon.io/) in the background to proxy for api calls. This file tells nodemon which directory to watch for changes and restart when files are updated.
 
 _.webpack.config.js_ - Oh the magic of Webpack! This file gives Webpack all the important details for doing what it does. Again this file is configurable; for more information visit [the configuration docs](https://webpack.js.org/configuration/).
-
-
-
 
 ## How did we get here?
 
@@ -98,8 +96,8 @@ There are so many resources out there to help developers resolve issues and buil
 
 This starter app was inspired and guided by the following resources:
 
-- [Simple React Full Stack](https://github.com/crsandeep/simple-react-full-stack)
-- [Webpack 4 Quickstart](https://github.com/valentinogagliardi/webpack-4-quickstart)
-- [Postgres Advanced Demo](https://github.com/vitaly-t/pg-promise-demo)
-- [React & Redux Tutorial](https://www.valentinog.com/blog/react-redux-tutorial-beginners/)
-- [React - Material UI Kit](https://www.creative-tim.com/product/material-kit-react)
+-   [Simple React Full Stack](https://github.com/crsandeep/simple-react-full-stack)
+-   [Webpack 4 Quickstart](https://github.com/valentinogagliardi/webpack-4-quickstart)
+-   [Postgres Advanced Demo](https://github.com/vitaly-t/pg-promise-demo)
+-   [React & Redux Tutorial](https://www.valentinog.com/blog/react-redux-tutorial-beginners/)
+-   [React - Material UI Kit](https://www.creative-tim.com/product/material-kit-react)
