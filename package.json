@@ -54,7 +54,7 @@
         "express": "^4.17.1",
         "express-rate-limit": "^5.x.x",
         "helmet": "^3.23.1",
-        "moment": "^2.26.0",
+        "moment": "^2.27.0",
         "morgan": "^1.10.0",
         "object-assign": "4.1.1",
         "pg-monitor": "^1.4.0",
