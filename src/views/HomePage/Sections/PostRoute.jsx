@@ -11,13 +11,13 @@ import Switch from '@material-ui/core/Switch'
 function PostRoute(props) {
     const { addUser } = props
 
-    const defultForm = {
+    const defaultForm = {
         name: '',
         message: '',
         tacos: false
     }
 
-    const [data, setData] = useState(defultForm)
+    const [data, setData] = useState(defaultForm)
     const [showLoading, setLoading] = useState(false)
 
     function onSubmit() {
@@ -26,7 +26,7 @@ function PostRoute(props) {
             .post('http://localhost:3000/api/users/add', data)
             .then((response) => {
                 props.addUser(response.data)
-                setData(defultForm)
+                setData(defaultForm)
                 setLoading(false)
             })
             .catch((error) => {
