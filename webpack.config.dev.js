@@ -9,7 +9,11 @@ export default {
         extensions: ['*', '.js', '.jsx', '.json'],
         // To support react-hot-loader
         alias: {
-            'react-dom': '@hot-loader/react-dom'
+            'react-dom': '@hot-loader/react-dom',
+            components: path.resolve(__dirname, 'src/components/'),
+            helpers: path.resolve(__dirname, 'src/helpers/'),
+            icons: path.resolve(__dirname, 'src/icons/'),
+            theme: path.resolve(__dirname, 'src/theme/')
         }
     },
     devtool: 'cheap-module-eval-source-map', // more info:https://webpack.js.org/guides/development/#using-source-maps and https://webpack.js.org/configuration/devtool/

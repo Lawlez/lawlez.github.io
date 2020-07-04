@@ -5,7 +5,7 @@ import { shallow } from 'enzyme'
 import LoginPage from '../views/LoginPage/LoginPage.js'
 
 describe('<LoginPage />', () => {
-    it("should have a section called 'intro'", () => {
+    it('should have a section called \'intro\'', () => {
         const wrapper = shallow(<LoginPage />)
         const actual = wrapper.find('p').text()
         const expected = 'howdy'
