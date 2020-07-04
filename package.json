@@ -60,7 +60,7 @@
     "moment": "^2.24.0",
     "morgan": "^1.10.0",
     "object-assign": "4.1.1",
-    "pg-monitor": "^1.4.0",
+    "pg-monitor": "^1.4.1",
     "pg-promise": "^10.x.x",
     "react": "16.13.1",
     "react-datetime": "^2.16.3",
