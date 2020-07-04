@@ -41,8 +41,7 @@ function configureStoreDev(initialState) {
         reactRouterMiddleware
     ]
 
-    const composeEnhancers =
-        window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose // add support for Redux dev tools
+    const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose // add support for Redux dev tools
     const store = createStore(
         createRootReducer(history), // root reducer with router state
         initialState,
@@ -61,8 +60,6 @@ function configureStoreDev(initialState) {
 }
 
 const configureStore =
-    process.env.NODE_ENV === 'production'
-        ? configureStoreProd
-        : configureStoreDev
+    process.env.NODE_ENV === 'production' ? configureStoreProd : configureStoreDev
 
 export default configureStore

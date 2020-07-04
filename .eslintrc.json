@@ -1,66 +1,43 @@
 {
-    "env":
-    {
+    "env": {
         "browser": true,
         "es6": true,
         "node": true
     },
-    "extends": ["eslint:recommended", "plugin:react/recommended", "plugin:security/recommended"],
-    "globals":
-    {
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:security/recommended"
+    ],
+    "globals": {
         "Atomics": "readonly",
         "SharedArrayBuffer": "readonly"
     },
-    "parserOptions":
-    {
-        "ecmaFeatures":
-        {
+    "parserOptions": {
+        "ecmaFeatures": {
             "experimentalObjectRestSpread": true,
             "jsx": true
         },
         "ecmaVersion": 11,
         "sourceType": "module"
     },
-    "plugins": [
-        "react",
-        "prettier",
-        "security"
-    ],
-    "rules":
-    {
-        "indent": [
-            "off",
-            "spaces"
-        ],
+    "plugins": ["react", "prettier", "security"],
+    "rules": {
+        "indent": ["off", "spaces"],
         "comma-dangle": "off",
         "react/no-unused-state": "error",
-        "linebreak-style": [
-            "error",
-            "unix"
-        ],
-        "quotes": [
-            "warn",
-            "single"
-        ],
-        "semi": [
-            "warn",
-            "never"
-        ],
-        "react/prop-types": [
-            "off"
-        ]
+        "linebreak-style": ["error", "unix"],
+        "quotes": ["warn", "single"],
+        "semi": ["warn", "never"],
+        "react/prop-types": ["off"]
     },
-    "settings":
-    {
-        "react":
-        {
+    "settings": {
+        "react": {
             "pragma": "React",
             "version": "16.8"
         },
-        "import/resolver":
-        {
-            "webpack":
-            {
+        "import/resolver": {
+            "webpack": {
                 "config": "webpack.config.js"
             }
         }

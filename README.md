@@ -5,17 +5,19 @@
 # lawlez.github.io
 
 ## using the PERN stack
+
 The PERN stack: [PostgresSQL](https://www.postgresql.org/), [Express](https://expressjs.com/), [React](https://reactjs.org/), &amp; [Node](https://nodejs.org/en/)
 
 Here's what is powering our PERN application:
-- [ESLint](https://eslint.org/): Style guide, syntax, and developer error finder and enforcer
-- [Webpack 4](https://webpack.js.org/): Static module bundler, complier, & hot-reloader
-- [Redux](https://redux.js.org/): Predictable state container/manager for JavaScript apps
-- [React-Router](https://github.com/ReactTraining/react-router#readme): “Dynamic Routing” (navigation) for React client
-- [React Material UI](https://material-ui.com/): Component library implementing Google's [Material Design](https://material.io/)
-- [Material-UI Kit](https://www.creative-tim.com/product/material-kit-react): Curated mid-level component library complete with view examples
-- [Axios](https://github.com/axios/axios): Promise based HTTP client for the browser and node.js
-- [Jest](https://github.com/facebook/jest): A comprehensive JavaScript testing solution that Works out of the box for most JavaScript projects.
+
+-   [ESLint](https://eslint.org/): Style guide, syntax, and developer error finder and enforcer
+-   [Webpack 4](https://webpack.js.org/): Static module bundler, complier, & hot-reloader
+-   [Redux](https://redux.js.org/): Predictable state container/manager for JavaScript apps
+-   [React-Router](https://github.com/ReactTraining/react-router#readme): “Dynamic Routing” (navigation) for React client
+-   [React Material UI](https://material-ui.com/): Component library implementing Google's [Material Design](https://material.io/)
+-   [Material-UI Kit](https://www.creative-tim.com/product/material-kit-react): Curated mid-level component library complete with view examples
+-   [Axios](https://github.com/axios/axios): Promise based HTTP client for the browser and node.js
+-   [Jest](https://github.com/facebook/jest): A comprehensive JavaScript testing solution that Works out of the box for most JavaScript projects.
 
 ## Using this project
 
@@ -32,20 +34,18 @@ cd into the project directory and install the dependencies:
     $ cd lawlez.github.io
     $ npm install
 
-
 > If you have npm v6+ installed and noticed there were more than 0 vulnerabilities are found, run: `npm audit fix`
 
 This should be done regularly: check your dependencies and update them. Snyk and Dependabot will help you automate this. More about npm's audit functionality [here](https://docs.npmjs.com/getting-started/running-a-security-audit).
 
-
 To start the Webpack dev server run:
 
-    $ npm dev
+    $ yarn dev
 
 And to build for deployment/production run:
 
-    $ npm build
-    $ npm start
+    $ yarn build
+    $ yarn start
 
 Also, don't forget that the API won't work unless you created a users table like this:
 
@@ -63,14 +63,15 @@ If you want to seed use:
 
 http://localhost:3000/api/users/init
 
->  Successful return:
->![id's](https://raw.githubusercontent.com/tg970/PERN-Advanced-Starter/master/src/assets/img/ids.png)
+> Successful return:
+> ![id's](https://raw.githubusercontent.com/tg970/PERN-Advanced-Starter/master/src/assets/img/ids.png)
 
 ## What's happening under the hood
 
 #### pg-promise: [Read up on it.](https://github.com/vitaly-t/pg-promise)
 
 #### Other Config files:
+
 _.babelrc_ - [Babel](https://babeljs.io/) is a toolchain used by Webpack to convert ECMAScript 2015+ code into a backward-compatible version of JavaScript for old browsers or environments. This file tells Babel our presets and plugins.
 
 _.eslintrc.json_ - This config file tells [ESLint](https://eslint.org/) our settings for interpreting and reporting errors and warnings while writing our code. Delete or add rules, change style guide, whatever you want, this is where you do it. For this to work, you'll need to make sure you have a linter and eslint installed in your code editor.
@@ -79,15 +80,12 @@ _nodemon.json_ - When Webpack spins up a dev server, it also starts [nodemon](ht
 
 _.webpack.config.js_ - Oh, the magic of Webpack! This file gives Webpack all the important details for doing what it does. Again this file is configurable; for more information visit [the configuration docs](https://webpack.js.org/configuration/).
 
-
-
-
 ## How did we get here?
 
 There are so many resources out there to help developers resolve issues and build new skills and tools. I'm very thankful for the sharing of knowledge, and I wanted to put this project together to help other devs hoping to try their hand at a full-stack React application.
 
 This starter app was inspired and guided by the following resources:
 
-- [React-slingshot](https://github.com/coryhouse/react-slingshot)
-- [Webpack 4 Quickstart](https://github.com/valentinogagliardi/webpack-4-quickstart)
-- [Postgres Advanced Demo](https://github.com/vitaly-t/pg-promise-demo)
+-   [React-slingshot](https://github.com/coryhouse/react-slingshot)
+-   [Webpack 4 Quickstart](https://github.com/valentinogagliardi/webpack-4-quickstart)
+-   [Postgres Advanced Demo](https://github.com/vitaly-t/pg-promise-demo)
