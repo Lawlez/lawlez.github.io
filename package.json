@@ -1,93 +1,241 @@
 {
-    "name": "lawlez.github.io",
-    "version": "0.9.1",
-    "description": "Personal Website",
-    "engines": {
-        "yarn": "1.22.4",
-        "node": "14.4.0"
+  "name": "lawlez.github.io",
+  "version": "0.9.2",
+  "description": "Personal Website",
+  "engines": {
+    "node": ">=13",
+    "npm": ">=3",
+    "yarn": "1.22.4"
+  },
+  "scripts": {
+    "preinstall": "node tools/nodeVersionCheck.js",
+    "start-message": "babel-node tools/startMessage.js",
+    "prestart": "npm run start-message",
+    "start": "concurrently -k -r -s first \"npm run test\" \"npm run open:src\" \"npm run server\"",
+    "server": "nodemon server/index.js",
+    "dev": "concurrently \"npm run server\" \"npm run open:src\"",
+    "open:src": "babel-node tools/srcServer.js",
+    "open:dist": "webpack-dashboard -- babel-node tools/distServer.js",
+    "webpack": "webpack-dashboard -- webpack-dev-server --http2",
+    "lint": "esw webpack.config.* src tools --color",
+    "lint:watch": "npm run lint -- --watch",
+    "clean-dist": "npm run remove-dist && mkdir dist",
+    "remove-dist": "rimraf ./dist",
+    "prebuild": "npm run lint && npm run test && npm run clean-dist",
+    "build": "babel-node tools/build.js",
+    "test": "jest",
+    "test:CI": "jest",
+    "test:cover": "npm run test -- --coverage ",
+    "test:cover:CI": "npm run test:CI -- --coverage && cat ./coverage/lcov.info | node_modules/coveralls/bin/coveralls.js",
+    "test:watch": "jest --watchAll",
+    "open:cover": "npm run test:cover && open-cli ./coverage/lcov-report/index.html",
+    "analyze-bundle": "babel-node ./tools/analyzeBundle.js",
+    "snyk-protect": "snyk protect",
+    "prepare": "yarn run snyk-protect"
+  },
+  "author": "Dominik Feger",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lawlez/lawlez.github.io.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lawlez/lawlez.github.io/issues"
+  },
+  "homepage": "https://github.com/lawlez/lawlez.github.io#readme",
+  "dependencies": {
+    "@hot-loader/react-dom": "16.13.0",
+    "@material-ui/core": "latest",
+    "@material-ui/icons": "^4.9.x",
+    "@material-ui/styles": "^4.2.1",
+    "axios": "0.19.2",
+    "bluebird": "^3.7.2",
+    "classnames": "^2.2.6",
+    "connected-react-router": "6.8.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-rate-limit": "^5.x.x",
+    "helmet": "^3.23.1",
+    "moment": "^2.24.0",
+    "morgan": "^1.10.0",
+    "object-assign": "4.1.1",
+    "pg-monitor": "^1.4.0",
+    "pg-promise": "^10.x.x",
+    "react": "16.13.1",
+    "react-datetime": "^2.16.3",
+    "react-dom": "16.13.1",
+    "react-nouislider": "^2.0.1",
+    "react-popper": "2.2.3",
+    "react-redux": "7.2.0",
+    "react-router-dom": "5.2.0",
+    "react-slick": "^0.26.x",
+    "react-swipeable-views": "^0.13.9",
+    "react-perfect-scrollbar": "^1.5.3",
+    "redux": "4.0.5",
+    "redux-thunk": "2.3.0",
+    "uuid": "^3.3.2",
+    "chart.js": "^2.8.0",
+    "react-chartjs-2": "^2.7.6",
+    "validate.js": "^0.13.1",
+    "clsx": "^1.0.4",
+    "history": "^4.9.0",
+    "snyk": "^1.360.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.10.1",
+    "@babel/core": "7.10.3",
+    "@babel/node": "7.10.1",
+    "@babel/plugin-proposal-class-properties": "7.10.1",
+    "@babel/plugin-proposal-export-default-from": "^7.10.1",
+    "@babel/plugin-syntax-export-default-from": "^7.10.1",
+    "@babel/plugin-transform-react-constant-elements": "7.10.1",
+    "@babel/plugin-transform-regenerator": "7.10.1",
+    "@babel/plugin-transform-runtime": "7.10.1",
+    "@babel/polyfill": "7.10.1",
+    "@babel/preset-env": "7.10.2",
+    "@babel/preset-react": "7.10.1",
+    "acorn": "7.3.1",
+    "ajv": "6.12.2",
+    "autoprefixer": "9.8.0",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-eslint": "10.1.0",
+    "babel-jest": "26.0.1",
+    "babel-loader": "8.1.0",
+    "babel-plugin-transform-react-remove-prop-types": "0.4.24",
+    "babel-preset-env": "^1.7.0",
+    "browser-sync": "2.26.7",
+    "chalk": "4.1.0",
+    "clean-webpack-plugin": "^3.x.x",
+    "concurrently": "5.2.0",
+    "connect-history-api-fallback": "1.6.0",
+    "coveralls": "3.1.0",
+    "css-loader": "3.6.0",
+    "cssnano": "4.1.10",
+    "enzyme": "3.11.0",
+    "enzyme-adapter-react-16": "1.15.2",
+    "eslint": "7.4.0",
+    "eslint-config-react": "^1.1.7",
+    "eslint-import-resolver-webpack": "^0.12.x",
+    "eslint-plugin-import": "2.21.2",
+    "eslint-plugin-jsx-a11y": "^6.3.0",
+    "eslint-plugin-prettier": "*",
+    "eslint-plugin-react": "7.20.0",
+    "eslint-plugin-react-hooks": "^4.0.4",
+    "eslint-plugin-security": "^1.4.0",
+    "eslint-watch": "7.0.0",
+    "file-loader": "6.0.0",
+    "hard-source-webpack-plugin": "0.13.1",
+    "history": "5.0.0",
+    "html-webpack-plugin": "4.3.0",
+    "identity-obj-proxy": "3.0.0",
+    "jest": "26.0.1",
+    "jest-cli": "26.0.1",
+    "json-loader": "0.5.7",
+    "mini-css-extract-plugin": "0.9.0",
+    "mockdate": "3.0.2",
+    "node-sass": "4.14.1",
+    "nodemon": "^2.x.x",
+    "open-cli": "6.0.1",
+    "postcss-loader": "3.0.0",
+    "prompt": "1.0.0",
+    "prop-types": "15.7.2",
+    "raf": "3.4.1",
+    "raw-loader": "^4.0.1",
+    "react-hot-loader": "4.12.21",
+    "react-markdown": "^4.3.1",
+    "react-test-renderer": "16.13.1",
+    "redux-immutable-state-invariant": "2.1.0",
+    "redux-mock-store": "1.5.4",
+    "replace": "1.2.0",
+    "rimraf": "3.0.2",
+    "sass-loader": "8.0.2",
+    "style-loader": "1.2.1",
+    "url-loader": "4.1.0",
+    "webpack": "4.43.0",
+    "webpack-bundle-analyzer": "3.8.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dashboard": "3.2.0",
+    "webpack-dev-middleware": "3.7.2",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-hot-middleware": "2.25.0"
+  },
+  "keywords": [],
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/tools/assetsTransformer.js",
+      "\\.(css)$": "<rootDir>/tools/assetsTransformer.js"
     },
-    "main": "server/index.js",
-    "scripts": {
-        "start": "node server/index.js",
-        "build": "webpack --mode production",
-        "client": "webpack-dev-server --mode development --devtool inline-source-map --hot",
-        "server": "nodemon src/server/index.js",
-        "dev": "concurrently \"yarn run server\" \"yarn run client\"",
-        "eslint": "eslint --fix './**/*.js'"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/lawlez/lawlez.github.io.git"
-    },
-    "author": "Dominik Feger",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/lawlez/lawlez.github.io/issues"
-    },
-    "homepage": "https://github.com/lawlez/lawlez.github.io#readme",
-    "dependencies": {
-        "@material-ui/core": "latest",
-        "@material-ui/icons": "^4.9.x",
-        "axios": "^0.19.x",
-        "bluebird": "^3.5.3",
-        "classnames": "^2.2.6",
-        "cors": "^2.8.5",
-        "dotenv": "^8.2.0",
-        "express": "^4.16.4",
-        "express-rate-limit": "^5.x.x",
-        "helmet": "^3.22.0",
-        "moment": "^2.26.0",
-        "morgan": "^1.9.1",
-        "pg-monitor": "^1.1.0",
-        "pg-promise": "^10.x.x",
-        "prop-types": "^15.6.2",
-        "react": "^16.11",
-        "react-datetime": "^2.16.3",
-        "react-dom": "^16.11",
-        "react-nouislider": "^2.0.1",
-        "react-popper": "2.2.3",
-        "react-redux": "^7.2.x",
-        "react-router-dom": "^5.x.x",
-        "react-slick": "^0.26.x",
-        "react-swipeable-views": "^0.13.8",
-        "redux": "^4.0.5"
-    },
-    "devDependencies": {
-        "@babel/cli": "^7.6.2",
-        "@babel/core": "^7.6.2",
-        "@babel/node": "^7.6.2",
-        "@babel/plugin-proposal-class-properties": "^7.5.5",
-        "@babel/plugin-proposal-export-default-from": "^7.5.2",
-        "@babel/plugin-syntax-export-default-from": "^7.2.0",
-        "@babel/plugin-transform-regenerator": "^7.4.5",
-        "@babel/preset-react": "^7.0.0",
-        "babel-core": "^6.26.x",
-        "babel-loader": "^8.0.6",
-        "babel-preset-env": "^1.7.0",
-        "clean-webpack-plugin": "^3.x.x",
-        "concurrently": "^5.x.x",
-        "css-loader": "^3.4.2",
-        "eslint": "^6.x.x",
-        "eslint-config-react": "^1.1.7",
-        "eslint-import-resolver-webpack": "^0.12.x",
-        "eslint-plugin-import": "^2.16.0",
-        "eslint-plugin-jsx-a11y": "^6.2.1",
-        "eslint-plugin-react": "^7.12.4",
-        "eslint-plugin-react-hooks": "^3.0.0",
-        "eslint-plugin-security": "^1.4.0",
-        "eslint-plugin-prettier": "*",
-        "file-loader": "^6.x.x",
-        "html-webpack-plugin": "^4.x.x",
-        "node-sass": "^4.13.1",
-        "nodemon": "^2.x.x",
-        "raw-loader": "^4.0.0",
-        "react-markdown": "^4.3.1",
-        "sass-loader": "^8.0.2",
-        "snyk": "^1.336.0",
-        "style-loader": "^1.x.x",
-        "url-loader": "^4.x.x",
-        "webpack": "^4.29.3",
-        "webpack-cli": "^3.2.3",
-        "webpack-dev-server": "^3.1.14"
+    "setupFiles": [
+      "raf/polyfill",
+      "./tools/enzymeTestAdapterSetup.js"
+    ]
+  },
+  "babel": {
+    "env": {
+      "development": {
+        "presets": [
+          "@babel/preset-env",
+          "@babel/preset-react"
+        ],
+        "plugins": [
+          "@babel/plugin-transform-runtime",
+          "@babel/plugin-proposal-class-properties",
+          "react-hot-loader/babel"
+        ]
+      },
+      "production": {
+        "presets": [
+          "@babel/preset-env",
+          "@babel/preset-react"
+        ],
+        "plugins": [
+          "@babel/plugin-transform-runtime",
+          "@babel/plugin-proposal-class-properties",
+          "@babel/plugin-transform-react-constant-elements",
+          "transform-react-remove-prop-types"
+        ]
+      },
+      "test": {
+        "presets": [
+          "@babel/preset-env",
+          "@babel/preset-react"
+        ],
+        "plugins": [
+          "@babel/plugin-transform-runtime",
+          "@babel/plugin-proposal-class-properties"
+        ]
+      }
     }
+  },
+  "eslintConfig": {
+    "root": true,
+    "extends": [
+      "eslint:recommended",
+      "plugin:import/errors",
+      "plugin:import/warnings",
+      "plugin:react/recommended"
+    ],
+    "plugins": [
+      "react"
+    ],
+    "parser": "babel-eslint",
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": true,
+        "experimentalObjectRestSpread": true
+      }
+    },
+    "env": {
+      "es6": true,
+      "browser": true,
+      "node": true,
+      "jquery": true,
+      "jest": true
+    },
+    "globals": {}
+  },
+  "snyk": true
 }

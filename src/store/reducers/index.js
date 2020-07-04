@@ -1,3 +1,4 @@
+/* eslint-disable security/detect-object-injection */
 import { ADD_USER, REMOVE_USER, USER_LOGIN } from '../constants/action-types.js'
 
 const initialState = {
