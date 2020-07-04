@@ -18,7 +18,6 @@ function WorkSection(props) {
             axios
                 .get('http://localhost:3000/api/users/all')
                 .then((response) => {
-                    console.log(response)
                     setLoading(false)
                     addUser(response.data)
                 })
