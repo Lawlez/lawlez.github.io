@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Link as RouterLink, withRouter } from 'react-router-dom'
 import PropTypes from 'prop-types'
-import validate from 'validate.js'
+//import validate from 'validate.js'
 import { makeStyles } from '@material-ui/styles'
 import {
     Grid,
@@ -151,9 +151,9 @@ const SignUp = (props) => {
         touched: {},
         errors: {}
     })
-
+    console.log(schema)
     useEffect(() => {
-        const errors = validate(formState.values, schema)
+        const errors = false //validate(formState.values, schema)
 
         setFormState((formState) => ({
             ...formState,
@@ -203,7 +203,7 @@ const SignUp = (props) => {
                                 className={classes.quoteText}
                                 variant="h1"
                             >
-                                Hella narwhal Cosby sweater McSweeney's, salvia
+                                Hella narwhal Cosby sweater McSweeneys, salvia
                                 kitsch before they sold out High Life.
                             </Typography>
                             <div className={classes.person}>

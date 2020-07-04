@@ -1,3 +1,4 @@
+/* eslint-disable security/detect-unsafe-regex */
 // For info about this file refer to webpack and webpack-hot-middleware documentation
 // For info on how we're generating bundles with hashed filenames for cache busting: https://medium.com/@okonetchnikov/long-term-caching-of-static-assets-with-webpack-1ecb139adb95#.w99i89nsz
 import webpack from 'webpack'
@@ -18,7 +19,8 @@ export default {
             'react-dom': '@hot-loader/react-dom',
             components: path.resolve(__dirname, 'src/components/'),
             helpers: path.resolve(__dirname, 'src/helpers/'),
-            icons: path.resolve(__dirname, 'src/icons/')
+            icons: path.resolve(__dirname, 'src/icons/'),
+            theme: path.resolve(__dirname, 'src/theme/')
         }
     },
     devtool: 'source-map', // more info:https://webpack.js.org/guides/production/#source-mapping and https://webpack.js.org/configuration/devtool/

@@ -1,3 +1,4 @@
+/* eslint-disable security/detect-object-injection */
 import React, { useState, useEffect } from 'react'
 import { Link as RouterLink, withRouter } from 'react-router-dom'
 import PropTypes from 'prop-types'
@@ -188,7 +189,7 @@ const SignIn = (props) => {
                                 className={classes.quoteText}
                                 variant="h1"
                             >
-                                Hella narwhal Cosby sweater McSweeney's, salvia
+                                Hella narwhal Cosby sweater McSweeneyss, salvia
                                 kitsch before they sold out High Life.
                             </Typography>
                             <div className={classes.person}>
@@ -315,7 +316,7 @@ const SignIn = (props) => {
                                     color="textSecondary"
                                     variant="body1"
                                 >
-                                    Don't have an account?{' '}
+                                    Dont have an account?
                                     <Link
                                         component={RouterLink}
                                         to="/sign-up"

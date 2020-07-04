@@ -2,8 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Provider } from 'react-redux'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import HomePage from './views/TestPage/HomePage.js'
-import { SignIn, Dashboard } from './views'
+import { SignIn, Dashboard, SignUp, NotFound } from './views'
 import { Container } from '@material-ui/core'
 import { ThemeProvider } from '@material-ui/styles'
 import theme from './theme'
@@ -19,6 +18,9 @@ const App = ({ store }) => (
                     <Switch>
                         <Route exact path="/" component={Dashboard} />
                         <Route path="/login" component={SignIn} />
+                        <Route path="/register" component={SignUp} />
+                        <Route path="/dashboard" component={Dashboard} />
+                        <Route path="*" component={NotFound} />
                     </Switch>
                 </Container>
 
