@@ -75,7 +75,7 @@
     "redux": "4.0.5",
     "redux-thunk": "2.3.0",
     "uuid": "^3.3.2",
-    "chart.js": "^2.8.0",
+    "chart.js": "^2.9.4",
     "react-chartjs-2": "^2.7.6",
     "validate.js": "^0.13.1",
     "clsx": "^1.0.4",
