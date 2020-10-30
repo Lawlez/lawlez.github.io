@@ -2,8 +2,6 @@ import React from 'react'
 import useStyles from './index.styles'
 import PropTypes from 'prop-types'
 import { Button as MuiButton } from '@material-ui/core'
-import withTranslation from '@tim/functional/withTranslation'
-import withSnackbarActionButton from '@tim/functional/withSnackbarActionButton'
 
 const Button = ({ color, label, variant, ...restProps }) => {
     const classes = useStyles()
@@ -31,7 +29,5 @@ Button.displayName = 'Button'
 
 //Vanilla Export used in Storybook
 export const ButtonComponent = Button
-//SnackbarActionButton used in snackbars
-export const SnackbarActionButton = withSnackbarActionButton(Button)
 //standard component export
-export default withTranslation(Button)
+export default Button

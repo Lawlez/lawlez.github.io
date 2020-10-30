@@ -2,7 +2,6 @@ import React from 'react'
 import useStyles from './index.styles'
 import { IconButton as MuiIconButton, Tooltip } from '@material-ui/core'
 import PropTypes from 'prop-types'
-import withTranslation from '@tim/functional/withTranslation'
 
 const IconButton = ({ variant, label, color, children, ...restProps }) => {
     const classes = useStyles()
@@ -37,4 +36,4 @@ IconButton.displayName = 'IconButton'
 //Vanilla Export used in Storybook
 export const IconButtonComponent = IconButton
 //standard component export
-export default withTranslation(IconButton)
+export default IconButton
