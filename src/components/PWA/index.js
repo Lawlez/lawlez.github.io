@@ -7,7 +7,7 @@ import { IconButton } from '@material-ui/core'
 
 import InstallIcon from '@material-ui/icons/GetApp'
 
-const PWA = props => {
+const PWA = () => {
     const [deferredPrompt, setDeferredPrompt] = useState(undefined)
     const [installed, setInstalled] = useState(false)
     useEffect(() => {
@@ -19,8 +19,9 @@ const PWA = props => {
             //divInstall.classList.toggle('hidden', false)
         }
 
-        const isInstalled = event => {
+        const isInstalled = () => {
             setInstalled(true)
+            console.log(installed)
         }
 
         window.addEventListener('beforeinstallprompt', installEvent)
