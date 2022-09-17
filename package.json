@@ -60,7 +60,7 @@
     "express-rate-limit": "^5.x.x",
     "helmet": "4.4.1",
     "history": "^4.9.0",
-    "moment": "2.29.1",
+    "moment": "2.29.4",
     "morgan": "^1.10.0",
     "pg-monitor": "1.4.1",
     "pg-promise": "10.7.1",
